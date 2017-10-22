@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<div class="container-fluid text-center">    
+  <div class="row content">
+  <div class="col-sm-2 sidenav"></div>
+    <div class="col-sm-8 text-left"> 
+      <h3 th:text="'Tambah Keluarga'">Tambah Keluarga</h3>
+      <br/>
+     	<form action="/keluarga/tambah" th:object="${keluarga}" method="POST">
+		  <div class="form-group">
+		    <label for="alamat">Alamat</label>
+		    <input type="text" class="form-control" name="alamat" required = "true"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="rt">RT</label>
+		    <input type="text" class="form-control" name="rt" required = "true"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="rw">RW</label>
+		    <input type="text" class="form-control" name="rw" required = "true"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="nama_kelurahan">Kelurahan/Desa</label>
+		    <input type="text" class="form-control" name="nama_kelurahan" required = "true"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="nama_kecamatan">Kecamatan</label>
+		    <input type="text" class="form-control" name="nama_kecamatan" required = "true"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="nama_kelurahan">Kota</label>
+		    <input type="text" class="form-control" name="nama_kota" required = "true"/>
+		  </div>
+		  <button name="action" type="submit" class="btn btn-primary">Simpan</button>
+		</form>
+		<br/>
+    </div>
+  </div>
+</div>
+</body>
+</html>
